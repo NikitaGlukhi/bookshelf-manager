@@ -1,0 +1,42 @@
+.navbar {
+  padding-top: 4rem;
+  width: 100%;
+
+  &-body {
+    height: 3rem;
+    background-color: #ff7300;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  &-item a {
+    width: 6rem;
+    position: relative;
+    color: white;
+    text-decoration: none;
+
+    &::after {
+      transition: background-color .1s;
+      content: '';
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    &:hover {
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+}

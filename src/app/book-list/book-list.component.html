@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<div class="books">
+  <div class="book" *ngFor="let book of books">
+    <app-book-item
+      [title]="book.title"
+      [category]="book.category"
+      [readStatus]="book.readStatus"
+      (bookSelected)="selectedBookId = book.id"
+      *ngIf="selectedBookId !== book.id"
+    ></app-book-item>
 
-</body>
-</html>
+    <app-book-detail
+      [title]="book.title"
+      [author]="book.author"
+      [pages]="book.pages"
+      [category]="book.category"
+      [readStatus]="book.readStatus"
+      (closed)="selectedBookId = undefined"
+      *ngIf="selectedBookId === book.id"
+    ></app-book-detail>
+  </div>
+</div>

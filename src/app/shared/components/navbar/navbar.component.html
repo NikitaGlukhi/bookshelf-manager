@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div>
+  <div class="navbar">
+    <div class="navbar-body">
+      <div class="navbar-items">
+        <div class="navbar-item" *ngFor="let item of navItems">
+          <a [innerText]="item.name" [routerLink]="item.href"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
