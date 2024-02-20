@@ -1,4 +1,27 @@
 <div class="item">
   <div class="item-body">
+    <div class="item-body-info">
+      <h2 class="item-name" [innerText]="title"></h2>
+      <h5 class="item-category" [innerText]="category"></h5>
+    </div>
+    <div class="item-body-additional-info">
+      <h3 class="item-name" [innerText]="'Author: ' + author"></h3>
+      <h3 class="item-pages" [innerText]="'Total pages: ' + pages"></h3>
+    </div>
+    <div class="item-body-status">
+      <h3
+        [class.item-status]="!readStatus"
+        [class.item-marked]="readStatus === statuses.wantToRead"
+        [class.item-in-progress]="readStatus === statuses.reading"
+        [class.item-completed]="readStatus === statuses.completed"
+        [innerText]="status"
+      ></h3>
+    </div>
+  </div>
+  <div class="item-footer">
+    <button class="btn btn-info" *ngIf="!isInWishList">Add to wishlist</button>
+    <button class="btn btn-success" *ngIf="isInWishList && !isReading">Started read</button>
+    <button class="btn btn-warning" *ngIf="isInWishList">Remove from wishlist</button>
+    <button class="btn btn-danger" (click)="closed.emit()">Close</button>
   </div>
 </div>

@@ -16,13 +16,12 @@ import { BOOK_CATEGORIES, BOOK_READ_STATUS } from '../../constants';
 })
 export class BookItemComponent implements OnInit {
   @Input() title?: string;
-  @Input() category?: Categories;
+  @Input() category?: string;
   @Input() readStatus?: ReadStatus;
 
   @Output() bookSelected = new EventEmitter<void>();
 
   status?: string;
-  bookCategory?: string;
   readonly statuses = ReadStatus;
 
   @HostListener('click')
@@ -31,7 +30,6 @@ export class BookItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bookCategory = this.category ? BOOK_CATEGORIES[this.category] : 'N/A';
     this.status = this.readStatus ? BOOK_READ_STATUS[this.readStatus] : 'Not viewed';
   }
 }

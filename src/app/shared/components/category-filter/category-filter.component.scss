@@ -1,0 +1,13 @@
+.filter {
+  &-body {
+    border: 0;
+    background-color: #2e2e35;
+    border-radius: 4px;
+    padding: .5rem;
+    color: white;
+  }
+
+  &:focus {
+    border: none;
+  }
+}

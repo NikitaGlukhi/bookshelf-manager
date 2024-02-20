@@ -1,0 +1,82 @@
+{
+  "books": [
+    {
+      "id": "efa96465-05ac-4c31-a9a4-8e76b60ea8f6",
+      "title": "Test 1",
+      "author": "John Doe",
+      "pages": 347,
+      "category": "horror"
+    },
+    {
+      "id": "799de334-72d0-4396-85b7-f320ccc496ba",
+      "title": "Test 2",
+      "author": "John Doe",
+      "pages": 347,
+      "category": "adventure",
+      "readStatus": 1
+    },
+    {
+      "id": "53f43cee-d7ef-48e5-a8c6-2d9d87b6ade9",
+      "title": "Test 3",
+      "author": "John Doe",
+      "pages": 347,
+      "category": "romance",
+      "readStatus": 2
+    },
+    {
+      "id": "ba139941-2e58-47f9-8391-d7600f142f3d",
+      "title": "Test 4",
+      "author": "John Doe",
+      "pages": 347,
+      "category": "science fiction",
+      "readStatus": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": "70fcf5bb-05af-4d51-b6b5-0118796eb49c",
+      "name": "horror"
+    },
+    {
+      "id": "0dea18c4-9729-4bf1-95f2-fe0029b3011c",
+      "name": "adventure"
+    },
+    {
+      "id": "92868834-8e5b-41e6-81e0-5bcad5e78db7",
+      "name": "mystery"
+    },
+    {
+      "id": "1790035a-7af0-4cc5-add1-c1b017499b42",
+      "name": "thriller"
+    },
+    {
+      "id": "7cf71053-cd19-4478-8cb9-69c76eafd236",
+      "name": "romance"
+    },
+    {
+      "id": "f743db9b-58c7-470b-b6c1-f35de9da6147",
+      "name": "fantasy"
+    },
+    {
+      "id": "1fe07cf5-7da8-4415-93fa-a28ca1d9fd4e",
+      "name": "science fiction"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

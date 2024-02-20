@@ -1,5 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   background-color: #2e2e35;
-  font-family: Arial;
+  font-family: Sans-Serif;
+}
+
+.btn {
+  border: 0;
+  border-radius: 4px;
+  padding: .5rem;
+  cursor: pointer;
+  transition: color .3s, background-color .3s;
+
+  &-info,
+  &-success,
+  &-danger {
+    color: white;
+  }
+
+  &-info {
+    background-color: #004080;
+    &:hover {
+      background-color: #01519f;
+    }
+  }
+
+  &-success {
+    background-color: #008000FF;
+    &:hover {
+      background-color: #009a00;
+    }
+  }
+
+  &-danger {
+    background-color: #b60000;
+    &:hover {
+      background-color: #ff0000;
+    }
+  }
+
+  &-warning {
+    color: #2e2e35;
+    background-color: #fbaa00;
+    &:hover {
+      background-color: #fbd100;
+    }
+  }
 }

@@ -5,6 +5,13 @@
         <div class="navbar-item" *ngFor="let item of navItems">
           <a [innerText]="item.name" [routerLink]="item.href"></a>
         </div>
+
+        <div *ngIf="categoriesService.categories$ | async as categories">
+          <app-category-filter
+            [categories]="categories"
+            (categorySelected)="getBooksByCategory($event)"
+          ></app-category-filter>
+        </div>
       </div>
     </div>
   </div>

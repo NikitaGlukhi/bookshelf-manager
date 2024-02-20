@@ -1,10 +1,10 @@
-import { Categories, ReadStatus } from '../enums';
+import { ReadStatus } from '../enums';
+import { IBaseEntity } from './base-entity';
 
-export interface IBook {
-  id: string;
+export interface IBook extends IBaseEntity {
   title: string;
   author: string;
   pages: number;
-  category: Categories;
+  category: string;
   readStatus?: ReadStatus;
 }

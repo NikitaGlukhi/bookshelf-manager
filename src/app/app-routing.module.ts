@@ -9,7 +9,7 @@ const routes: Routes = [
     component: NavbarComponent,
     children: [
       {
-        path: 'main',
+        path: '',
         loadChildren: () => import('./book-list/book-list.module')
           .then(module => module.BookListModule),
       },

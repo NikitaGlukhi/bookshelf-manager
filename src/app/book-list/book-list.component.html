@@ -1,4 +1,4 @@
-<div class="books">
+<div class="books" *ngIf="booksService.books$ | async as books">
   <div class="book" *ngFor="let book of books">
     <app-book-item
       [title]="book.title"
