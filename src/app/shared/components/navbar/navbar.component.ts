@@ -11,12 +11,16 @@ import { INavbarItem } from './models';
 export class NavbarComponent implements OnInit {
   readonly navItems: INavbarItem[] = [
     {
-      name: 'All books',
+      name: 'My books',
       href: '',
     },
     {
       name: 'Manage categories',
       href: '/categories',
+    },
+    {
+      name: 'Add book',
+      href: '/add-book',
     },
   ];
 

@@ -1,5 +1,5 @@
 <select class="filter-body" [(ngModel)]="selectedCategory" (ngModelChange)="categorySelected.emit($event)">
-  <option value="default">Select</option>
+  <option value="default" hidden>Select category</option>
   <option
     class="filter-item"
     *ngFor="let category of categories"

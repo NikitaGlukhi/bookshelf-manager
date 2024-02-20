@@ -1,0 +1,28 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="body" *ngIf="form">
+  <form [formGroup]="form">
+    <div class="field-group">
+      <input type="text" class="form-control" formControlName="title" placeholder="Enter book name" />
+    </div>
+
+    <div class="field-group">
+      <input type="text" class="form-control" formControlName="author" placeholder="Enter author name" />
+    </div>
+
+    <div class="field-group">
+      <input type="number" min="0" class="form-control" formControlName="pages" placeholder="Enter pages count" />
+    </div>
+
+    <div class="field-group" *ngIf="categoriesService.categories$ | async as categories">
+      <app-category-filter
+        [categories]="categories"
+        (categorySelected)="setCategoryValue($event)"
+      ></app-category-filter>
+    </div>
+
+    <div class="button-position">
+      <button class="btn btn-success w-95" (click)="saveBookData()">Save</button>
+    </div>
+  </form>
+</div>

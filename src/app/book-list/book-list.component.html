@@ -1,3 +1,5 @@
+<app-navigation-bar></app-navigation-bar>
+
 <div class="books" *ngIf="booksService.books$ | async as books">
   <div class="book" *ngFor="let book of books">
     <app-book-item
@@ -9,12 +11,16 @@
     ></app-book-item>
 
     <app-book-detail
+      [id]="book.id"
       [title]="book.title"
       [author]="book.author"
       [pages]="book.pages"
       [category]="book.category"
       [readStatus]="book.readStatus"
       (closed)="selectedBookId = undefined"
+      (edit)="navigateToEditMode()"
+      (readStatusUpdated)="updateBook(book.id, $event)"
+      (removeBook)="removeBook(book.id)"
       *ngIf="selectedBookId === book.id"
     ></app-book-detail>
   </div>

@@ -6,8 +6,8 @@ import {
   EventEmitter,
   HostListener,
 } from '@angular/core';
-import { Categories, ReadStatus } from '../../enums';
-import { BOOK_CATEGORIES, BOOK_READ_STATUS } from '../../constants';
+import { ReadStatus } from '../../enums';
+import { BOOK_READ_STATUS } from '../../constants';
 
 @Component({
   selector: 'app-book-item',

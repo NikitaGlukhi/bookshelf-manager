@@ -1,13 +1,6 @@
 {
   "books": [
     {
-      "id": "efa96465-05ac-4c31-a9a4-8e76b60ea8f6",
-      "title": "Test 1",
-      "author": "John Doe",
-      "pages": 347,
-      "category": "horror"
-    },
-    {
       "id": "799de334-72d0-4396-85b7-f320ccc496ba",
       "title": "Test 2",
       "author": "John Doe",
@@ -30,53 +23,51 @@
       "pages": 347,
       "category": "science fiction",
       "readStatus": 3
+    },
+    {
+      "title": "Test 1",
+      "author": "Joshn Doe",
+      "pages": 340,
+      "category": "thriller",
+      "id": "57bbd9ec-c25e-4d7c-afcb-30ecb7a353dd",
+      "readStatus": 2
     }
   ],
   "categories": [
     {
       "id": "70fcf5bb-05af-4d51-b6b5-0118796eb49c",
-      "name": "horror"
+      "name": "horror",
+      "control": "horror"
     },
     {
       "id": "0dea18c4-9729-4bf1-95f2-fe0029b3011c",
-      "name": "adventure"
+      "name": "adventure",
+      "control": "adventure"
     },
     {
       "id": "92868834-8e5b-41e6-81e0-5bcad5e78db7",
-      "name": "mystery"
+      "name": "mystery",
+      "control": "mystery"
     },
     {
       "id": "1790035a-7af0-4cc5-add1-c1b017499b42",
-      "name": "thriller"
+      "name": "thriller",
+      "control": "thriller"
     },
     {
       "id": "7cf71053-cd19-4478-8cb9-69c76eafd236",
-      "name": "romance"
+      "name": "romance",
+      "control": "romance"
     },
     {
       "id": "f743db9b-58c7-470b-b6c1-f35de9da6147",
-      "name": "fantasy"
+      "name": "fantasy",
+      "control": "fantasy"
     },
     {
       "id": "1fe07cf5-7da8-4415-93fa-a28ca1d9fd4e",
-      "name": "science fiction"
+      "name": "science fiction",
+      "control": "scienceFiction"
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

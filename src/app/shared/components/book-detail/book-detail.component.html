@@ -19,9 +19,10 @@
     </div>
   </div>
   <div class="item-footer">
-    <button class="btn btn-info" *ngIf="!isInWishList">Add to wishlist</button>
-    <button class="btn btn-success" *ngIf="isInWishList && !isReading">Started read</button>
-    <button class="btn btn-warning" *ngIf="isInWishList">Remove from wishlist</button>
+    <button class="btn btn-info" *ngIf="!isInWishList" (click)="readStatusUpdated.emit(statuses.wantToRead)">Add to wishlist</button>
+    <button class="btn btn-success" *ngIf="isInWishList && !isReading" (click)="readStatusUpdated.emit(statuses.reading)">Started read</button>
+    <button class="btn btn-info" (click)="edit.emit()">Edit</button>
     <button class="btn btn-danger" (click)="closed.emit()">Close</button>
+    <button class="btn btn-danger" (click)="removeBook.emit()">Remove</button>
   </div>
 </div>

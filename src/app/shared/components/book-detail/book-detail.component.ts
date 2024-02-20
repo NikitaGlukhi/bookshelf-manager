@@ -8,6 +8,7 @@ import {BOOK_CATEGORIES, BOOK_READ_STATUS} from '../../constants';
   styleUrls: ['./book-detail.component.scss'],
 })
 export class BookDetailComponent implements OnInit {
+  @Input() id?: string;
   @Input() title?: string;
   @Input() author?: string;
   @Input() pages?: number;
@@ -15,6 +16,9 @@ export class BookDetailComponent implements OnInit {
   @Input() readStatus?: ReadStatus;
 
   @Output() closed = new EventEmitter<void>();
+  @Output() edit = new EventEmitter<void>();
+  @Output() readStatusUpdated = new EventEmitter<ReadStatus>();
+  @Output() removeBook = new EventEmitter<void>();
 
   status?: string;
   readonly statuses = ReadStatus;

@@ -5,14 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CategoryFilterComponent, NavbarComponent } from './shared';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    CategoryFilterComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,

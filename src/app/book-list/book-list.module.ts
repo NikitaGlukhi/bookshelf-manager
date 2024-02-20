@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { BookListComponent } from './book-list.component';
 import { BookListRoutingModule } from './book-list-routing.module';
-import { BookDetailComponent, BookItemComponent } from '../shared';
+import { BookDetailComponent, BookItemComponent, NavbarModule } from '../shared';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,6 @@ import { BookDetailComponent, BookItemComponent } from '../shared';
     BookDetailComponent,
     BookItemComponent,
   ],
-  imports: [CommonModule, BookListRoutingModule, HttpClientModule],
+  imports: [CommonModule, BookListRoutingModule, NavbarModule, HttpClientModule],
 })
 export class BookListModule {}

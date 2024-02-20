@@ -46,3 +46,28 @@ body {
     }
   }
 }
+
+.field-group {
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-control {
+  background-color: #2e2e35;
+  color: white;
+  border: 1px solid #ff7300;
+  border-radius: 4px;
+  padding: .5rem;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-100 {
+  width: 100%;
+}

@@ -1,22 +1,16 @@
-<div>
-  <div class="navbar">
-    <div class="navbar-body">
-      <div class="navbar-items">
-        <div class="navbar-item" *ngFor="let item of navItems">
-          <a [innerText]="item.name" [routerLink]="item.href"></a>
-        </div>
+<div class="navbar">
+  <div class="navbar-body">
+    <div class="navbar-items">
+      <div class="navbar-item" *ngFor="let item of navItems">
+        <a [innerText]="item.name" [routerLink]="item.href"></a>
+      </div>
 
-        <div *ngIf="categoriesService.categories$ | async as categories">
-          <app-category-filter
-            [categories]="categories"
-            (categorySelected)="getBooksByCategory($event)"
-          ></app-category-filter>
-        </div>
+      <div *ngIf="categoriesService.categories$ | async as categories">
+        <app-category-filter
+          [categories]="categories"
+          (categorySelected)="getBooksByCategory($event)"
+        ></app-category-filter>
       </div>
     </div>
   </div>
-
-  <main>
-    <router-outlet></router-outlet>
-  </main>
 </div>

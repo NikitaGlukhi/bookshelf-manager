@@ -1,0 +1,31 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="body">
+  <div *ngIf="categoriesService.categories$ | async as categories">
+    <div *ngIf="form">
+      <form [formGroup]="form">
+        <div class="field-group" *ngFor="let category of categories">
+          <input type="text" class="form-control" [formControlName]="category.control" />
+          <button
+            class="btn btn-info"
+            [disabled]="!form.get(category.control)?.valid && !form.get(category.control)?.touched"
+            (click)="updateCategory(category.id, category.control)"
+          >Update</button>
+          <button
+            class="btn btn-danger"
+            (click)="deleteCategory(category.id)"
+          >Delete</button>
+        </div>
+
+        <div class="field-group">
+          <input type="text" class="form-control" formControlName="newCategory" placeholder="Add new category">
+          <button
+            class="btn btn-info"
+            [disabled]="!form.get('newCategory')?.valid && !form.get('newCategory')?.touched"
+            (click)="addNewCategory()"
+          >Add new</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
